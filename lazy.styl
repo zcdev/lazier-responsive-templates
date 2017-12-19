@@ -4,54 +4,122 @@ License: MIT
 */
 
     /* RESET : Basic settings - The Lazier the better! */
-        html { height: 100%; box-sizing: border-box; }
-        body { margin: 0; padding: 0; }
-        *, *:before, *:after { box-sizing: inherit; }
+        html 
+          height 100%
+          box-sizing border-box
+        body
+          margin 0
+          padding 0
+        *
+          &
+          &:before
+          &:after
+            box-sizing inherit
 
     /* LAZY PRESET : No need to touch - As Lazy as possible! */
-        .row { float: left; width: 100%; display: flex; margin: 1% 0; }
-        .col_10 { width: 100%; }
-        .col_9 { width: 90%; }
-        .col_8 { width: 80%; }
-        .col_7 { width: 70%; }
-        .col_6 { width: 60%; }
-        .col_5 { width: 50%; }
-        .col_4 { width: 40%; }
-        .col_3 { width: 30%; }
-        .col_2 { width: 20%; }
-        .col_1 { width: 10%; }
-        [class^="col"] { float: left; margin: 0 1%; padding: 0.5rem; flex: 1 auto; }
-        .reverse { display: flex; }
-        .reverse aside { top: 0; right: 0; }
-        .remove { display: none; }
-        .remove + main { width: 98%; }
+        .row
+          float left
+          width 100%
+          display flex
+          margin 1% 0
+        for num in (1...11)
+          .col_{num}
+            width: 10% * num
+        [class^="col"]
+          float left
+          margin 0 1%
+          padding 0.5rem
+          flex 1 auto
+        .reverse
+          display flex
+          & aside
+              top 0
+              right 0
+        .remove
+          display none
+          & + main
+                width 98%
         
     /* DEFAULT DESIGN : For your convenience but can be removed */
-        body { background: #000; font-family: arial, sans-serif; font-size: 1em; }
-        aside { width: 19%; float: left; background: #fff; position: fixed; height: 100%; margin: 0; padding: 0.5rem; }
-        main { width: 79%; float: right; margin: 1%; }
-        article { background: #fff; }
-        nav a { float: left; display: inline-block; width: 100%; padding: 1rem; border-bottom: 1px solid #fff; background: #000; color: #fff; text-decoration: none; margin-bottom: 20px; }
-        nav a:hover, nav a:active, nav a:focus { background-color: #666; color: #fff; }
-        img { width: 100%; max-width: 480px; float: left; }
-        a { color: #666; display: block; font-weight: bold; }
-        h4 { color: #666; }
-        header, footer { color: #fff; padding: 0.5rem; text-align: center; }
+        body
+          background #000
+          font 1em arial, sans-serif
+        aside
+          width 19%
+          float left
+          background #fff
+          position fixed
+          height 100%
+          margin 0
+          padding 0.5rem
+        main
+          width 79%
+          float right
+          margin 1%
+        article
+          background #fff
+        nav
+          a
+            float left
+            display inline-block
+            width 100%
+            padding 1rem
+            border-bottom 1px solid #fff
+            background #000
+            color #fff
+            text-decoration none
+            margin-bottom 20px
+            &:hover
+            &:active
+            &:focus
+              background-color #666
+              color #fff
+        img
+          width 100%
+          max-width 480px
+          float left
+        a
+          color #666
+          display block
+          font-weight bold
+        h4
+          color #666
+        header footer
+          color #fff
+          padding 0.5rem
+          text-align center
 
     /* RESPONSIVE */
-    @media (max-width: 768px) {
-        aside { width: 100%; height: auto; position: relative; }
-        main { width: 98%; }
-        [class^="col"] { width: 100%; }
-        .full { width: 98%; display: block; margin: 0; }
-        .full article { display: block; margin: 1%;}
-        .reverse { display: block; }
-    }
-    @media (max-width: 480px) {
-        [class^="col"] { width: 100%; margin: 0.5% 0; }
-        .row { display: block; margin: 0;}
-        .full { width: 100%; }
-        .full article { width: 100%; display: block; margin: 0.5% 0;}
-    }
+@media (max-width: 768px)
+  aside
+    width 100%
+    height auto
+    position relative
+  main
+    width 98%
+  [class^="col"]
+    width 100%
+  .full
+    width 98%
+    display block
+    margin 0
+    & article
+        display block
+        margin 1%
+  .reverse
+    display block
+@media (max-width: 480px)
+        [class^="col"]
+          width 100%
+          margin 0.5% 0
+        .row
+          display block
+          margin 0
+        .full
+          width 100%
+          & article
+              width 100%
+              display block
+              margin 0.5% 0
         
     /* CUSTOM : Dump your stuff or tweak here */

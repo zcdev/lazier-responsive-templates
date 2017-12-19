@@ -23,35 +23,35 @@ body {
   display: flex;
   margin: 1% 0;
 }
-.col_10 {
-  width: 100%;
-}
-.col_9 {
-  width: 90%;
-}
-.col_8 {
-  width: 80%;
-}
-.col_7 {
-  width: 70%;
-}
-.col_6 {
-  width: 60%;
-}
-.col_5 {
-  width: 50%;
-}
-.col_4 {
-  width: 40%;
-}
-.col_3 {
-  width: 30%;
+.col_1 {
+  width: 10%;
 }
 .col_2 {
   width: 20%;
 }
-.col_1 {
-  width: 10%;
+.col_3 {
+  width: 30%;
+}
+.col_4 {
+  width: 40%;
+}
+.col_5 {
+  width: 50%;
+}
+.col_6 {
+  width: 60%;
+}
+.col_7 {
+  width: 70%;
+}
+.col_8 {
+  width: 80%;
+}
+.col_9 {
+  width: 90%;
+}
+.col_10 {
+  width: 100%;
 }
 [class^="col"] {
   float: left;
@@ -75,8 +75,7 @@ body {
 /* DEFAULT DESIGN : For your convenience but can be removed */
 body {
   background: #000;
-  font-family: arial, sans-serif;
-  font-size: 1em;
+  font: 1em arial, sans-serif;
 }
 aside {
   width: 19%;
@@ -125,8 +124,7 @@ a {
 h4 {
   color: #666;
 }
-header,
-footer {
+header footer {
   color: #fff;
   padding: 0.5rem;
   text-align: center;
